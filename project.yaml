@@ -1,14 +1,21 @@
-specVersion: 0.2.0
-name: subql-myriad
-version: 0.0.4
+specVersion: 1.0.0
+name: testnet-subql-myriad
+version: 1.0.0
+runner:
+  node:
+    name: "@subql/node"
+    version: ">=1.13.3"
+  query:
+    name: "@subql/query"
+    version: "*"
 description: This project can be use as a starting po...
-repository: https://github.com/octopus-appchains/subql-myriad.git
+repository: https://github.com/octopus-appchains/testnet-subql-myriad.git
 schema:
   file: ./schema.graphql
 network:
   endpoint: >-
-    wss://gateway.mainnet.octopus.network/myriad/a4cb0a6e30ff5233a3567eb4e8cb71e0
-  genesisHash: "0x74ed91fbc18497f011290f9119a2217908649170337b6414a2d44923ade07063"
+    wss://gateway.testnet.octopus.network/myriad/8f543a1c219f14d83c0faedefdd5be6e
+  genesisHash: "0x7d45920ff7956e45ef6107720e41b1cfdbd0a50371d6e9072f67070fb285fe16"
 dataSources:
   - kind: substrate/Runtime
     startBlock: 1
