@@ -30,10 +30,10 @@ services:
       DB_HOST: postgres
       DB_PORT: 5432
     volumes:
-      - ./:/app
+      - ./:/subql-myriad
     command:
-      - -f=/app
-      - --db-schema=app
+      - -f=/subql-myriad
+      - --db-schema=subql-myriad
       - --disable-historical=true
     healthcheck:
       test: ["CMD", "curl", "-f", "http://subquery-node:3000/ready"]
@@ -58,6 +58,6 @@ services:
       DB_HOST: postgres
       DB_PORT: 5432
     command:
-      - --name=app
+      - --name=subql-myriad
       - --playground
       - --indexer=http://subquery-node:3000

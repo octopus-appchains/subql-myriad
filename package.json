@@ -1,5 +1,5 @@
 {
-  "name": "testnet-subql-myriad",
+  "name": "subql-myriad",
   "version": "1.0",
   "description": "This project can be use as a starting po...",
   "main": "dist/index.js",
